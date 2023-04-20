@@ -34,9 +34,8 @@ class Category {
 
             $sql = "SELECT * FROM categories WHERE id = " . $id;
 
-            
-            $stmt = $conn->prepare($sql);
-            $status = $stmt->execute();
+              $stmt = $conn->prepare($sql);
+              $status = $stmt->execute();
 
             if (!$status) {
                 $error_info = $stmt->errorInfo();
@@ -62,6 +61,44 @@ class Category {
         }
 
         return $categories;
+    }
+    public static function findById($id){
+        $category = null;
+        try{
+          $db = new DB();
+          $conn = $db->open();
+          $conn = $db->getConnection();
+        
+          $sql = "SELECT * FROM article_website.categories WHERE id = :id";
+    
+          $params = [
+            ":id" => $id
+          ];
+    
+          $stmt = $conn->prepare($sql);
+          $status = $stmt->execute($params);
+        
+          if(!$status){
+            $error_info = $stmt->errorInfo();
+            $message = 
+            "SQLSTATE error code = " . $error_info[0] . 
+            "; error message = ". $error_info[2];
+             throw new Exception($message);
+          }
+    
+    
+          $row = $stmt->fetch(PDO::FETCH_ASSOC);
+          if($row !== FALSE){
+            $category = new Category($row);
+          }
+        }
+    
+        finally{
+          if($db != null && $db->isOpen()){
+            $db->close();
+          }
+        }
+        return $category;
     }
 }
 ?>

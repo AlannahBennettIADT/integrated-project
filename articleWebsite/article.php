@@ -4,21 +4,21 @@ require_once "classes/category.php";
 
  try{
     $story = Story::findById($_GET["id"]);
-    $category = Category::findByCategory($story->category_id);
+    $category = Category::findById($story->category_id);
 
-    $categoryGaming = Category::findByCategory(2);
-    $categoryTech = Category::findByCategory(1);
-    $categoryReviews = Category::findByCategory(4);
-    $categorySocialMedia = Category::findByCategory(3);
+    // $categoryGaming = Category::findByCategory(2);
+    // $categoryTech = Category::findByCategory(1);
+    // $categoryReviews = Category::findByCategory(4);
+    // $categorySocialMedia = Category::findByCategory(3);
 
 
-    $gamingHorizontal = Story::findByCategory(2,3);
-    $technologyHorizontal = Story::findByCategory(1,3,4);
-    $bigReviews = Story::findByCategory(4,4);
-    $gamingTopStories = Story::findByCategory(2,2,3);
-    $socialMediaStories = Story::findByCategory(3,3,1);
-    $socialMediaMain = Story::findByCategory(3,1,4);
-    $technologyList = Story::findByCategory(1,5);
+    // $gamingHorizontal = Story::findByCategory(2,3);
+    // $technologyHorizontal = Story::findByCategory(1,3,4);
+    // $bigReviews = Story::findByCategory(4,4);
+    // $gamingTopStories = Story::findByCategory(2,2,3);
+    // $socialMediaStories = Story::findByCategory(3,3,1);
+    // $socialMediaMain = Story::findByCategory(3,1,4);
+    // $technologyList = Story::findByCategory(1,5);
 
  }
  catch (Exception $e)
@@ -71,6 +71,9 @@ require_once "classes/category.php";
 
 
 <section class="article">
+<div class="heading">
+  <h3><?= $category->type?></h3>
+</div>
     <div class="container">
         <div class="articleHeading width-8">
         <div class="extras">
@@ -88,7 +91,9 @@ require_once "classes/category.php";
                 <h3><?= $story->article; ?></h3>
             </div>
     </div>
-    <div class="container width-4">
+
+
+    <!-- <div class="container width-4">
         <div class="panelsSide width-4">
         <?php foreach($socialMediaStories as $story){ ?>
           <div class="sidePanels width-4">
@@ -111,11 +116,8 @@ require_once "classes/category.php";
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 </section>
-
-
-
 
 
 <footer>

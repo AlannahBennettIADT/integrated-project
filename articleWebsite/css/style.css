@@ -431,3 +431,12 @@ footer h2 {
     justify-content: center;
 }
 
+.heading{
+    background-color:#e6e6e6;
+    text-align: center;
+}
+
+.heading h3{
+    font-size: 20px;
+    font-weight: 700;    
+}
