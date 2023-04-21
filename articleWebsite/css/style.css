@@ -440,3 +440,7 @@ footer h2 {
     font-size: 20px;
     font-weight: 700;    
 }
+
+.article .sidePanels{
+    display: block;
+}

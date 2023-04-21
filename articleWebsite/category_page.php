@@ -5,7 +5,6 @@ require_once "classes/category.php";
  try{
     $story = Story::findAll();
     $categoryList = Story::findByCategory($_GET["id"], 10);
-
     $allCategory = Category::findByCategory($_GET["id"]);
 
  }
@@ -76,7 +75,7 @@ require_once "classes/category.php";
                 <h2><a href="article.php?id=<?= $story->id ?>"><?= $story->headline; ?></a></h2>
             </div>
         </div>
-        <?php } ?>
+    <?php } ?>
     </div>
 </div>
 

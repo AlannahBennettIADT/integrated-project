@@ -5,20 +5,10 @@ require_once "classes/category.php";
  try{
     $story = Story::findById($_GET["id"]);
     $category = Category::findById($story->category_id);
+    $stories = Story::findAll();
+    $categoryList = Story::findByCategory($story->category_id, 10);
+    $allCategory = Category::findByCategory($story->category_id);
 
-    // $categoryGaming = Category::findByCategory(2);
-    // $categoryTech = Category::findByCategory(1);
-    // $categoryReviews = Category::findByCategory(4);
-    // $categorySocialMedia = Category::findByCategory(3);
-
-
-    // $gamingHorizontal = Story::findByCategory(2,3);
-    // $technologyHorizontal = Story::findByCategory(1,3,4);
-    // $bigReviews = Story::findByCategory(4,4);
-    // $gamingTopStories = Story::findByCategory(2,2,3);
-    // $socialMediaStories = Story::findByCategory(3,3,1);
-    // $socialMediaMain = Story::findByCategory(3,1,4);
-    // $technologyList = Story::findByCategory(1,5);
 
  }
  catch (Exception $e)
@@ -69,34 +59,32 @@ require_once "classes/category.php";
         </div>
 </header>
 
-
 <section class="article">
-<div class="heading">
-  <h3><?= $category->type?></h3>
-</div>
     <div class="container">
-        <div class="articleHeading width-8">
-        <div class="extras">
+      <div class="width-7">
+        <div class="articleHeading width-7">
+          <div class="extras">
                 <h4><?= $story->author; ?></h4>
                 <h5><?= $story->pub_date; ?></h5>
                 <h5><?= $story->location; ?></h5>
-            </div>
+          </div>
+
+
             <h2><?= $story->headline; ?></h2>
             <h3> <?= $story->short_headline; ?></h3>
             <img src=".<?= $story->img_url?>">
         </div>
+
+      <div class=" width-7">
+        <h3><?= $story->article; ?></h3>
     </div>
-    <div class="container">
-            <div class="mainArticle width-7">
-                <h3><?= $story->article; ?></h3>
-            </div>
     </div>
 
 
-    <!-- <div class="container width-4">
-        <div class="panelsSide width-4">
-        <?php foreach($socialMediaStories as $story){ ?>
-          <div class="sidePanels width-4">
+    <div class="mainSplit v2 width-5">
+        <div class="panelsSide width-5">
+        <?php foreach($categoryList as $story){ ?>
+          <div class="sidePanels width-5">
             <div class="sidePanel">
               <div class="imageContent">
               <img src=".<?= $story->img_url?>">
@@ -106,18 +94,19 @@ require_once "classes/category.php";
               <h4><?= $story->short_headline; ?></h4>
               <p><i class="fa-solid fa-circle-user"></i><?= $story->author; ?></p>
             </div>
-            <?php foreach($categorySocialMedia as $category){ ?>
+            <?php foreach($allCategory as $category){ ?>
                 <h3><?= $category->type?></h3>
-                <?php } ?>
+              <?php } ?>
             </div>
-          </div>
           <?php } ?>
+    </div>
         </div>
           </div>
         </div>
       </div>
-    </div> -->
 </section>
+
+
 
 
 <footer>
