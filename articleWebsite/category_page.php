@@ -112,9 +112,7 @@ require_once "classes/category.php";
                     <li><a href="#">CES 2023</a></li>
                 </ul>
             </div>
-            <div class="footerBlock width-3">
-              <img src="./images/app-store-badges-en 1.png";>
-          </div>
+
 
         </div>
 </footer>

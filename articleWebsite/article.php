@@ -4,18 +4,14 @@ require_once "classes/category.php";
 
  try{
     $story = Story::findById($_GET["id"]);
-    $category = Category::findById($story->category_id);
-    $stories = Story::findAll();
     $categoryList = Story::findByCategory($story->category_id, 10);
     $allCategory = Category::findByCategory($story->category_id);
-
-
+    $latestStory = Story::findLatest(1);
  }
  catch (Exception $e)
 {
      echo $e;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +57,7 @@ require_once "classes/category.php";
 
 <section class="article">
     <div class="container">
-      <div class="width-7">
+      <div class="aHeading width-7">
         <div class="articleHeading width-7">
           <div class="extras">
                 <h4><?= $story->author; ?></h4>
@@ -69,19 +65,30 @@ require_once "classes/category.php";
                 <h5><?= $story->location; ?></h5>
           </div>
 
-
             <h2><?= $story->headline; ?></h2>
             <h3> <?= $story->short_headline; ?></h3>
             <img src=".<?= $story->img_url?>">
         </div>
 
       <div class=" width-7">
+        <br>
         <h3><?= $story->article; ?></h3>
     </div>
     </div>
 
-
     <div class="mainSplit v2 width-5">
+      <div class="latestStory">
+      <h1> LATEST STORY</h1>
+      <div class="lStory">
+        <?php foreach($latestStory as $story){ ?>
+          <h2><a href="article.php?id=<?= $story->id ?>"><?= $story->headline; ?></a></h2>
+          <img src=".<?= $story->img_url?>">
+          <?php } ?>
+        </div>
+        </div>
+          <?php foreach($allCategory as $category){ ?>
+                <h1>More in <?= $category->type?></h1>
+        <?php } ?>
         <div class="panelsSide width-5">
         <?php foreach($categoryList as $story){ ?>
           <div class="sidePanels width-5">
@@ -105,8 +112,6 @@ require_once "classes/category.php";
         </div>
       </div>
 </section>
-
-
 
 
 <footer>
@@ -140,9 +145,6 @@ require_once "classes/category.php";
                     <li><a href="#">CES 2023</a></li>
                 </ul>
             </div>
-            <div class="footerBlock width-3">
-              <img src="./images/app-store-badges-en 1.png";>
-          </div>
 
         </div>
 </footer>

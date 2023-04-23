@@ -414,7 +414,7 @@ footer h2 {
     background-color: #FCE44D;
     padding:3px;
 }
-.article img{
+.aHeading img{
     width: 1000px;
 }
 .articleHeading{
@@ -443,4 +443,21 @@ footer h2 {
 
 .article .sidePanels{
     display: block;
+}
+
+.mainSplit.v2 .latestStory img{
+    width: 200px;
+}
+.lStory{
+    display: flex;
+}
+.lStory h2{
+    font-size: 18px;
+}
+
+.mainSplit.v2 h1{
+    border-bottom: 2px solid #000;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }

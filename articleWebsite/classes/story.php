@@ -158,5 +158,43 @@ class Story {
         }
         return $story;
     }
+
+    public static function findLatest($number) {
+        $stories = array();
+
+        try {
+            $db = new DB();
+            $db->open();
+            $conn = $db->getConnection();
+
+            $sql = "SELECT * FROM stories ORDER BY pub_date DESC LIMIT " . $number;
+            $stmt = $conn->prepare($sql);
+            $status = $stmt->execute();
+
+            if (!$status) {
+                $error_info = $stmt->errorInfo();
+                $message = "SQLSTATE error code = ".$error_info[0]."; error message = ".$error_info[2];
+                throw new Exception("Database error executing database query: " . $message);
+            }
+
+            if ($stmt->rowCount() !== 0) {
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                while ($row !== FALSE) {
+                    $story = new Story($row);
+                    $stories[] = $story;
+
+                    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                }
+            }
+        }
+
+        finally {
+            if ($db !== null && $db->isOpen()) {
+                $db->close();
+            }
+        }
+
+        return $stories;
+    }
 }
 ?>
