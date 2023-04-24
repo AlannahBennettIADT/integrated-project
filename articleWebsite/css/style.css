@@ -39,6 +39,7 @@ p {
     font-size: 20px;
 }
 
+
 /* Side Panel */
 
 .border {
@@ -88,7 +89,30 @@ p {
  .sidePanel i{
      margin-right: 10px;
 }
+.header .panelsSide h1{
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom:  2px solid black;
+    width: 600px;
+}
 
+  .button:hover {
+    background-color: #FCE44D; /* Green */
+
+  }
+  .button{
+    background-color: white;
+    color: black;
+    border: 3px solid #FCE44D; /* Green */
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    padding:10px
+  }
+  .panelsSide h2{
+      display: flex;
+      justify-content: center;
+
+  }
 
 /* Header*/
 
@@ -455,9 +479,14 @@ footer h2 {
     font-size: 18px;
 }
 
-.mainSplit.v2 h1{
+.article .mainSplit.v2 h1{
     border-bottom: 2px solid #000;
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 20px;
+}
+
+/* CATEGORY PAGE */
+.categoryLoop .header{
+    background-color: #e6e6e6;
 }

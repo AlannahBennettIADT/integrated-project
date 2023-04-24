@@ -57,10 +57,18 @@ require_once "classes/category.php";
 </header>
 
 
+
+
+
 <div class="categoryLoop">
-<div class="container">
-    <?php foreach($categoryList as $story){ ?>
-        <div class="horizontalCategory width-4">
+<div class="header">
+    <?php foreach($allCategory as $category){ ?>
+        <h1><?= $category->type?></h1>
+    <?php } ?>
+    </div>
+    <div class="container">
+        <?php foreach($categoryList as $story){ ?>
+            <div class="horizontalCategory width-4">
             <div class="categoryImage">
                 <img src=".<?= $story->img_url?>">
             </div>
@@ -74,8 +82,8 @@ require_once "classes/category.php";
                 </div>
                 <h2><a href="article.php?id=<?= $story->id ?>"><?= $story->headline; ?></a></h2>
             </div>
-        </div>
-    <?php } ?>
+            </div>
+        <?php } ?>
     </div>
 </div>
 

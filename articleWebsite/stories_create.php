@@ -98,6 +98,7 @@ require_once "classes/category.php";
 
       <div class="mainSplit v2 width-5">
         <div class="panelsSide width-5">
+        <h1> More in Social Media  </h1>
         <?php foreach($socialMediaStories as $story){ ?>
           <div class="sidePanels width-5">
             <div class="sidePanel">
@@ -115,6 +116,8 @@ require_once "classes/category.php";
             </div>
           </div>
           <?php } ?>
+            <h2><a href="category_page.php?id=3" class="button">More Stories&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></h2>
+        
         </div>
           </div>
         </div>

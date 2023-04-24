@@ -4,9 +4,9 @@ require_once "classes/category.php";
 
  try{
     $story = Story::findById($_GET["id"]);
-    $categoryList = Story::findByCategory($story->category_id, 10);
     $allCategory = Category::findByCategory($story->category_id);
     $latestStory = Story::findLatest(1);
+    $categoryList = Story::findByCategoryNOT($story->category_id,$_GET["id"]);
  }
  catch (Exception $e)
 {
