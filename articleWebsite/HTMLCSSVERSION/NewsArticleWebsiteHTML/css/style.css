@@ -1,0 +1,493 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 0px;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+body {
+    background-color: white;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+
+.header{
+    display: grid;
+    justify-content:center;
+    padding-top: 20px;    
+}
+.header .navButtons{
+    font-size: 20px;
+}
+
+
+/* Side Panel */
+
+.border {
+    border-left: 2px solid grey;
+    margin-left: 40px;
+}
+
+.sidePanel{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.sidePanel .imageContent img{
+    padding-right: 20px;
+    width: 320px;
+    height: 200px;
+}
+.sidePanel .sideContent {
+    width:50%;
+}
+
+.sidePanels{
+    display: flex;
+}
+
+ .sidePanel h2{
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ .sidePanel h3{
+     padding:5px;
+     background-color: #FCE44D;
+     height: 35px;
+     transform: rotate(90deg);
+     margin-top: 30px;
+     white-space: nowrap;
+ }
+ .mainSecond .sidePanel h3{
+    margin-top: 10px;
+    transform: rotate(0deg);
+}
+
+ .sidePanel p{
+     font-size: 14px;
+ }
+ .sidePanel i{
+     margin-right: 10px;
+}
+.header .panelsSide h1{
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom:  2px solid black;
+    width: 600px;
+}
+
+  .button:hover {
+    background-color: #FCE44D; /* Green */
+
+  }
+  .button{
+    background-color: white;
+    color: black;
+    border: 3px solid #FCE44D; /* Green */
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    padding:10px
+  }
+  .panelsSide h2{
+      display: flex;
+      justify-content: center;
+
+  }
+
+/* Header*/
+
+.mainStory.v2{
+    background-image: url(/images/Gaming/gaming06.jpg);
+}
+.mainStory.v2 h2{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.mainSplit.v1{
+    background-color: #FCE44D;
+    background-image: url(../images/SocialMedia/socialmedia01.jpg);
+    background-size: contain;
+    overflow: hidden;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.mainSplit.v2{
+    border-left: 1px solid black;
+    padding-left: 30px;
+}
+
+.gamingHeader {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.mainSplit.v1 h2{
+    color: white;
+    padding: 40px;
+    width: 250px;
+    line-height: 35px;
+    font-size: 32px;
+    font-weight: 300;
+    border-bottom: 2px solid white;
+    margin-left: 30px;
+}
+
+.secondMainSection .mainSecond img{
+    width:750px;
+    height: 500px;
+    margin-right: 25px;
+}
+
+.mainSecond{
+    display: flex;
+}
+.mainSecond h2{
+    line-height: 35px;
+    font-size: 32px;
+    font-weight: 300;
+}
+.mainSecond h3{
+    font-size: 18px;
+
+}
+.mainSecond h4{
+    font-size: 14px;
+}
+
+/* Horizontal Line Title */
+  .hrLines{
+    position: relative;
+  }
+  .hrLines{
+    position: relative;
+    max-width: width-7;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .hrLines:after{
+    content:" ";
+    height: 1px;
+    width: 400px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+  .hrLines:before{
+    content:" ";
+    display: block;
+    height: 1px;
+    width: 400px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    background: black;
+  }
+
+  .hrLines h2{
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+
+/* Small Stories */
+.smallStories h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Main Review */
+
+.siteIcon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.siteIcon i{
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.reviewHeading{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.reviewHeading .reviewIcon h4{
+    transform: rotate(-90deg);
+    background-color: yellow;
+    padding:10px;
+}
+.reviewHeading .reviewIcon{
+padding-top: 20px;
+}
+
+
+/* Gaming Headers */
+
+.games01 img{
+    width: 410px;
+    height: 200px;
+}
+.categoryName{
+    display: flex;
+    margin-top: 15px;
+}
+.categoryName i{
+    padding-right: 10px;
+}
+ .games01 h2{
+    font-size:13px;
+    font-weight: 800;
+}
+.categoryName h5{
+    color: black;
+    font-size: 12px;
+}
+.games01{
+    margin-right: 50px;
+}
+
+
+/* Technology Large */
+
+.techReviews{
+    padding-right:30px;
+}
+.techReview .categoryName{
+    display: flex;
+    margin-top: 15px;
+}
+.techReviews .authorAndDate{
+    display: flex;
+}
+.authorAndDate i{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.techReviews .readtime{
+    display: flex;
+}
+.readtime i{
+    margin-right:10px;
+}
+
+.techReview img{
+    height: 200px;
+}
+.reviewsBig{
+    background-color: #e6e6e6;
+}
+
+
+/* Circle */
+.circle {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+
+}
+
+.topThree{
+    display: flex;
+    margin-bottom: 10px;
+}
+.topThree .topThreeContent{
+    margin-left: -50px;
+}
+
+
+/* Category Reusable */
+
+.horizontalHeading h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.horizontalHeading i{
+    padding-right: 10px;
+    font-size: 36px;
+}
+
+.horizontalCategory{
+    display: flex;
+    border-bottom: 3px solid #FCE44D;
+    margin-right: 40px;
+}
+
+.categoryContent h2{
+    font-size: 15px;
+}
+.categoryImage img{
+    width: 400px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+.categoryImage{
+    margin-right: 20px;
+}
+
+.horizontalHeading{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width:300px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.categoryHeader {
+    display: flex;
+}
+.categoryHeader.h2 img{
+    transform: scalex(-1);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #EEEEEE;
+    color: black;
+}
+
+footer h2 {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footerBlock {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    flex: 1;
+    border-radius: 4px;
+    line-height: 35px;
+    font-size: 13px;
+}
+.footerBlock a:hover{
+    color: blue;
+}
+
+.footerBlock h4{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left:5px;
+    border-left: 1px solid  grey;
+    padding:0px 8px 0px 8px;
+}
+
+.footerBlock li img{
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+/* ARTICLE PAGE */
+.article .extras{
+    display:flex;
+}
+.article .extras h5{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.article .extras h4{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    background-color: #FCE44D;
+    padding:3px;
+}
+.aHeading img{
+    width: 1000px;
+}
+.articleHeading{
+    word-wrap: break-word;
+}
+.articleHeading h3{
+    max-width: 1000px;
+}
+.articleHeading h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.mainArticle{
+    justify-content: center;
+}
+
+.heading{
+    background-color:#e6e6e6;
+    text-align: center;
+}
+
+.heading h3{
+    font-size: 20px;
+    font-weight: 700;    
+}
+
+.article .sidePanels{
+    display: block;
+}
+
+.mainSplit.v2 .latestStory img{
+    width: 200px;
+}
+.lStory{
+    display: flex;
+}
+.lStory h2{
+    font-size: 18px;
+}
+
+.article .mainSplit.v2 h1{
+    border-bottom: 2px solid #000;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* CATEGORY PAGE */
+.categoryLoop .header{
+    background-color: #e6e6e6;
+}
+
