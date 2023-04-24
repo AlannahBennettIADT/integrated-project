@@ -58,8 +58,6 @@ require_once "classes/category.php";
 
 
 
-
-
 <div class="categoryLoop">
 <div class="header">
     <?php foreach($allCategory as $category){ ?>
